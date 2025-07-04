@@ -85,7 +85,7 @@ This system is designed to demonstrate **object-oriented programming principles*
 ```
 ## Image
 ```
-![Fawry](https://github.com/karimelnekheily/Ecommerce-System-Challenge/blob/49948934dfe40ae3db30eacde224af0b7e084d7e/output%20image%20fawry.png)
+![Fawry](output_image_fawry.png)
 ```
 
 ### ✅ Sample Output:
