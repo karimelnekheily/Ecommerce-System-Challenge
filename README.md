@@ -1,108 +1,119 @@
 
-# E-commerce Console Application
+# 🛒 E-Commerce System – Fawry Internship Challenge 2025
 
-![GitHub](https://img.shields.io/badge/license-MIT-blue.svg)
+## 📋 Overview
 
-## Overview
+This project is a simulation of a simplified **e-commerce system** built in **Java**. It models key components of an online store, such as:
+- Products (with or without expiration or shipping needs)
+- A shopping cart
+- Customers
+- Checkout flow
+- Shipping service
 
-This is a console-based e-commerce application built to simulate an online store. It allows users to browse products, add items to a cart, manage their cart, and perform checkout operations. The application is designed as a challenge to demonstrate core programming concepts such as object-oriented programming, data management, and user interaction in a console environment.
+This system is designed to demonstrate **object-oriented programming principles** (inheritance, interfaces, polymorphism) and clean architectural thinking.
 
-## Features
+## 🎯 Features
 
-- **Product Catalog**: View a list of available products with details like name, price, and description.
-- **Shopping Cart**: Add, remove, or update items in the cart.
-- **Checkout Process**: Calculate total cost and simulate a purchase.
-- **User Management**: Register and log in as a customer (optional admin panel for managing products).
-- **Console Interface**: Simple text-based interface for ease of use.
+✅ Define products with:
+- `name`, `price`, and `quantity`
 
-## Technologies Used
+✅ Support different product behaviors:
+- Some products **expire** (like cheese or biscuits or Milk)
+- Some products **require shipping** (like TVs and cheese)
+- Some products are **digital/non-shippable** (like scratch cards)
 
-- **Language**: [Specify the programming language, e.g., Java, Python, C++, etc.]
-- **Other Tools**: [e.g., Any libraries or frameworks used, if applicable]
+✅ Shopping Cart:
+- Add products with a quantity ≤ available stock
+- Prevent adding expired products
+- Calculate **subtotal**
+- Prevent checkout if:
+  - Cart is empty
+  - Customer has insufficient balance
+  - Product is out of stock or expired
 
-## Installation
+✅ Checkout Flow:
+- Calculate and display:
+  - Order subtotal
+  - Shipping fees (flat rate)
+  - Final amount paid
+  - Customer’s remaining balance
+- List all shippable items and send them to the `ShippingService`
 
-To run this project locally, follow these steps:
+✅ Shipping Service:
+- Accepts a list of objects implementing the `ShippableItem` interface
+- Displays:
+  - Each item's quantity and weight
+  - Total package weight
 
-1. **Clone the Repository**:
-   ```bash
-   git clone (https://github.com/karimelnekheily/Ecommerce-System-Challenge.git)
-   ```
+## 🔧 Tech Stack
 
-2. **Navigate to the Project Directory**:
-   ```bash
-   cd Ecommerce-System-Challange
-   ```
+- **Java 21+**
+- Pure OOP
 
-3. **Compile and Run** (adjust based on the programming language):
-   - For Java:
-     ```bash
-     javac Main.java
-     java Main
-     ```
-   - For Python:
-     ```bash
-     python main.py
-     ```
+## Classes
 
-4. **Dependencies** (if any):
-   - Ensure you have [e.g., Java JDK, Python 3.x] installed.
-   - Install any required libraries: [e.g., `pip install <library>`].
+| Class | Responsibility |
+|-------|----------------|
+| `Product` | Base class for all products |
+| `ExpirableProduct` | Products that can expire |
+| `ShippableProducts` | Products that require shipping |
+| `ShippableExpirableProduct` | Products that expire **and** need shipping |
+| `Cart` | Manages items added to the cart |
+| `Customer` | Has a balance and can checkout |
+| `ShippingService` | Handles shipment logic |
+| `ShippableItems` | Interface for items that can be shipped |
+| `ExpireItems` | Interface for items that can expire |
 
-## Usage
+## 🧪 Example
 
-1. Launch the application by running the main file.
-2. Follow the console prompts to:
-   - Browse products.
-   - Add items to your cart.
-   - View or modify your cart.
-   - Proceed to checkout.
-3. (Optional) Use admin credentials to manage products (if implemented).
+```java
+            Cart cart = new Cart();
+            Customer customer = new Customer("Karimelnekheily", 4000, cart);
 
-Example interaction:
+            //As cheese are expirable and shippable
+            ShippableExpirableProduct cheese = new ShippableExpirableProduct("Cheese", 70, 10, 0.4, LocalDate.of(2025, 7, 27));
+            //Tv shippable but not expired
+            ShippableProducts tv = new ShippableProducts("TV", 1200, 20, 0.7);
+            //scratch card not expired and not shippable
+            Product scratchCard = new Product("Scratch Card", 130, 10);
+
+            cart.addItem(cheese, 2);
+            cart.addItem(tv, 1);
+            cart.addItem(scratchCard, 1);
+
+            customer.checkout(customer, cart);
 ```
-Welcome to the E-commerce Console App!
-1. View Products
-2. Add to Cart
-3. View Cart
-4. Checkout
-5. Exit
-Enter your choice: 1
+###Image
+```
+![Fawry](C:\Users\karim\Downloads\output image fawry.png)
 ```
 
-## Project Structure
+### ✅ Sample Output:
 
 ```
-Ecommerce-System-Challange/
-├── src/                # Source code files
-├── data/               # Sample product data (if applicable)
-├── README.md           # This file
-└── LICENSE             # License file (e.g., MIT)
+** Shipment notice **
+1x TV 700g
+2x Cheese 400g
+Total package weight 1.5kg
+
+** Checkout Receipt **
+1X TV 1200
+2X Cheese 70
+1X Scratch Card 130
+-----------------------
+Subtotal: 1470.0
+Shipping : 30.0
+Amount: 1500.0
+Remaining Balance: 2500.0
+Checkout Done! 🎉
 ```
 
-## Contributing
+## 📦 How to Run
 
-Contributions are welcome! To contribute:
+1. Clone the repo https://github.com/karimelnekheily/Ecommerce-System-Challenge.git
+2. Open the project in any Java IDE
+3. Run the `Main.java` file
 
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Make your changes and commit (`git commit -m "Add feature"`).
-4. Push to your branch (`git push origin feature-branch`).
-5. Open a Pull Request.
+## Trainee
 
-Please ensure your code follows the project's coding standards and includes appropriate tests.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For questions or suggestions, feel free to reach out:
-- GitHub: [karimelnekheily](https://github.com/karimelnekheily)
-- Email: [elnekheilykarim@gmail.com]
-
----
-
-Happy shopping in the console world! 🛒
-```
+**Karim Elnekheily** 
