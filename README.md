@@ -84,7 +84,9 @@ This system is designed to demonstrate **object-oriented programming principles*
             customer.checkout(customer, cart);
 ```
 ###Image
+```
 ![Fawry](C:\Users\karim\Downloads\output image fawry.png)
+```
 
 ### ✅ Sample Output:
 
