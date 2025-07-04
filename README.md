@@ -31,7 +31,7 @@ To run this project locally, follow these steps:
 
 2. **Navigate to the Project Directory**:
    ```bash
-   cd Ecommerce-console-app-challange
+   cd Ecommerce-System-Challange
    ```
 
 3. **Compile and Run** (adjust based on the programming language):
