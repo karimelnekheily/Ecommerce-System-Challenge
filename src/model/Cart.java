@@ -65,4 +65,7 @@ public class Cart {
 
 
 
+    public boolean isEmpty() {
+        return items.isEmpty();
+    }
 }
