@@ -1,7 +1,7 @@
 # E-commerce Console Application
 
 ![GitHub](https://img.shields.io/badge/license-MIT-blue.svg)
-![GitHub last commit]()
+![GitHub last commit](https://github.com/karimelnekheily/Ecommerce-System-Challenge.git)
 
 ## Overview
 
@@ -26,4 +26,4 @@ To run this project locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone 
+   git clone https://github.com/karimelnekheily/Ecommerce-System-Challenge.git
