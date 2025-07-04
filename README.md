@@ -1,7 +1,7 @@
 # E-commerce Console Application
 
 ![GitHub](https://img.shields.io/badge/license-MIT-blue.svg)
-![GitHub last commit](https://github.com/karimelnekheily/Ecommerce-System-Challenge.git)
+
 
 ## Overview
 
