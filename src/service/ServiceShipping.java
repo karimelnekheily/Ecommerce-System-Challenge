@@ -24,9 +24,8 @@ public class ServiceShipping {
             itemWeight.put(name, item.getWeight());
             totalWeight+=item.getWeight();
         }
-      //  System.out.printf("%dx %s %.0fg\n", itemCount.get(name), name, itemWeight.get(name) * 1000);
         for(String name: itemCount.keySet()){
-            System.out.println(itemCount.get(name)+"x "+name +" "+ (itemWeight.get(name)*1000));
+            System.out.printf("%dx %s %.0fg\n", itemCount.get(name), name, itemWeight.get(name) * 1000);
         }
         System.out.printf("Total package weight %.1fkg\n", totalWeight);
 

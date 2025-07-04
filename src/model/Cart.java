@@ -59,7 +59,7 @@ public class Cart {
     }
     public void printCart(){
         for (Map.Entry<Product, Integer> entry : items.entrySet()) {
-            System.out.println(entry.getKey().getQuantity() + " X " + entry.getKey().getName() + " " + entry.getKey().getPrice());
+            System.out.println(entry.getValue()+ "X " + entry.getKey().getName() + " " + entry.getKey().getPrice());
         }
     }
 

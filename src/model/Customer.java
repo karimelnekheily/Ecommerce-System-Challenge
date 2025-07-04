@@ -46,11 +46,12 @@ public class Customer {
         System.out.println("\n** Checkout Receipt **");
         customer.getCart().printCart();
         System.out.println("-----------------------");
+
         System.out.println("Subtotal: " + Subtotal);
         System.out.println("Shipping : " + shippingFees);
         System.out.println("Amount: " + totalAmount);
         System.out.println("Remaining Balance: " + balance);
-        System.out.println("Checkout successful! 🎉\n");
+        System.out.println("Checkout Done! 🎉\n");
 
         cart.clearCart();
 
