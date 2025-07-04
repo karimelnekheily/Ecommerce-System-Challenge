@@ -1,6 +1,6 @@
-package model.Product;
+package model.product;
 
-public class ShippableProducts extends product implements ShippableItems{
+public class ShippableProducts extends Product implements ShippableItems {
 
     private double weight;
     public ShippableProducts(String name,int price,int quantity,double weight){

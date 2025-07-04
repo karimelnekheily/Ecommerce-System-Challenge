@@ -1,9 +1,11 @@
-package model.Product;
+package model.product;
+
+
 
 
 import java.time.LocalDate;
 
-public class ExpirableProduct  extends product implements ExpireItems {
+public class ExpirableProduct  extends Product implements ExpireItems {
 
     private LocalDate expiryDate;
 

@@ -1,8 +1,8 @@
-package model.Product;
+package model.product;
 
 import java.time.LocalDate;
 
-public class ShippableExpirableProduct extends product implements ExpireItems,ShippableItems{
+public class ShippableExpirableProduct extends Product implements ExpireItems, ShippableItems {
 
 
     private double weight;
