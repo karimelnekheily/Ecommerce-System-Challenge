@@ -85,7 +85,7 @@ This system is designed to demonstrate **object-oriented programming principles*
 ```
 ###Image
 ```
-![Fawry](C:\Users\karim\Downloads\output image fawry.png)
+![Fawry](output image fawry.png)
 ```
 
 ### ✅ Sample Output:
