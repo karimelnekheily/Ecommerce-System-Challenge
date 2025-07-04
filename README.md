@@ -83,7 +83,7 @@ This system is designed to demonstrate **object-oriented programming principles*
 
             customer.checkout(customer, cart);
 ```
-###Image
+## Image
 ```
 ![Fawry](C:\Users\karim\Desktop\Ecommerce-challenge\output image fawry.png)
 ```
