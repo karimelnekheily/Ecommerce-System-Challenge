@@ -83,10 +83,7 @@ This system is designed to demonstrate **object-oriented programming principles*
 
             customer.checkout(customer, cart);
 ```
-## Image
-```
-![Fawry](https://github.com/karimelnekheily/Ecommerce-System-Challenge/blob/bd7158a22b3dab92c0d1a9866ac455a173f37ff4/output%20image%20fawry.png)
-```
+
 
 ### ✅ Sample Output:
 
