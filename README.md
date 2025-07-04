@@ -26,7 +26,7 @@ To run this project locally, follow these steps:
 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/mohamedamgad200/Ecommerce-console-app-challange.git
+   git clone (https://github.com/karimelnekheily/Ecommerce-System-Challenge.git)
    ```
 
 2. **Navigate to the Project Directory**:
